@@ -1,0 +1,50 @@
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url("../fonts/TitilliumWeb-Regular.ttf");
+}
+
+table, th, tr, td {
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#tabelaGols {
+    box-shadow: 4px 4px 10px black;
+    margin: auto auto;
+    padding: 2px;
+}
+
+#rodada {
+    background-color: rgb(226, 53, 53);
+    color: white;
+}
+
+#cabecalhoGolsPartidas {
+    background-color: rgb(102, 88, 88);
+}
+
+.partida {
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    padding: 2px;
+}
+
+.equipe {
+    width: 165px;
+}
+
+.gols {
+    width: 30px;
+}
+
+.vs {
+    width: 25px;
+}
