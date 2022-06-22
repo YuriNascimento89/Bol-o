@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url("../fonts/TitilliumWeb-Regular.ttf");
+}
+
+.conteiner {
+    text-align: center;
+}
+
+body{
+    background-image: url(campo4.jpeg);
+}
+
+fieldset {
+    width: 424px;
+    box-shadow: 4px 4px 10px black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+}
+
+
+legend {
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    font-size: 20px;
+    background-color: rgb(70, 204, 58);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ldados {
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    width: 100px
+}
+
+.fdados {
+    width: 305px;
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+h1, h2 {
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    text-align: center;
+}
+
+table, th, tr, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+}
+
+#tapostas {
+    box-shadow: 4px 4px 10px black;
+    margin: auto auto;
+    padding: 2px;
+}
+
+th, td {
+    padding: 2px;
+}
+
+thead {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+tfoot {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.partida {
+font-size: 16px;
+font-weight: bold;
+}
+
+.equipe {
+    background-color: rgb(70, 204, 58);
+    width: 500px;
+}
+
+.gols {
+    width:25px;
+}
+
+.fgols {
+    text-align: center;
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    font-size: 16px;
+    width: 25px;
+    box-shadow: 0 0 0 0;
+    border: 0;
+    outline: 0;
+
+}
+
+.vs {
+    background-color: yellow;
+    width:20px;
+}
+
+#botao {
+    text-align: center;
+}
+
+
+.botoes {
+    width: 465px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    background-color: #FCC302;
+    font-size: 18px;
+}

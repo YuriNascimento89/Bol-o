@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+  
+<html lang="pt-br">
+    <head>
+        <title>Aposta</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="tabela2.css"/>
+        <script src="bolao.js"></script>
+        <!--Remoção dos controles do formulario numérico-->
+        <style>
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class ="conteiner">
+            <h1>Bolão colatinense</h1>
+            <!--<h2>Nilo's Bar</h2>-->
+            <form id="dadosPessoais" action="processaAposta.php" method="POST">
+                <fieldset id="delimitador">
+                    <legend>Inscreva-se</legend>
+                    <label for="fnome" id="lnome" class="ldados">Nome:</label>
+                    <input type="text" id="fnome" class="fdados" name="fnome" placeholder="Digite seu nome" minlength="4" maxlength="43" onblur="converteParaMaiusculas()" required /><br/><br>
+                    <label for="fcelular" id="lcelular" class="ldados">Celular:</label>
+                    <input oninput="mascaracelular(this)" type="text" id="fcelular" class="fdados" name="fcelular" placeholder="00000-0000"/><br/><br>
+                    <!--<label for="fresponsavel" id="lresponsavel" class="ldados">Responsável:</label>-->
+                    <!--<input type="text" id="fresponsavel" class="fdados" name="fresponsavel" placeholder="Responsável" maxlength="43"/>-->
+                </fieldset>
+                <br>
+                <table id="tapostas">
+                    <thead>
+                        <tr>
+                            <th id="rodada" colspan="5">Partidas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="partida01" class="partida">
+                            <td id="equipe01" class="equipe">Internacional</td>
+                            <td id="golsEquipe01" class="gols"><input type="number" id="gol01" class="fgols" name="gol01" required /></td>
+                            <td id="vsPartida01" class="vs">x</td>
+                            <td id="golsEquipe02" class="gols"><input type="number" id="gol02" class="fgols" name="gol02" required /></td>
+                            <td id="equipe02" class="equipe">Coritiba</td>
+                        </tr>
+                        <tr id="partida02" class="partida">
+                            <td id="equipe03" class="equipe">Athletico-PR</td>
+                            <td id="golsEquipe03" class="gols"><input type="number" id="gol03" class="fgols" name="gol03" required /></td>
+                            <td id="vsPartida02" class="vs">x</td>
+                            <td id="golsEquipe04" class="gols"><input type="number" id="gol04" class="fgols" name="gol04" required /></td>
+                            <td id="equipe04" class="equipe">Bragantino</td>
+                        </tr>
+                        <tr id="partida03" class="partida">
+                            <td id="equipe05" class="equipe">Flamengo</td>
+                            <td id="golsEquipe05" class="gols"><input type="number" id="gol05" class="fgols" name="gol05" required /></td>
+                            <td id="vsPartida03" class="vs">x</td>
+                            <td id="golsEquipe06" class="gols"><input type="number" id="gol06" class="fgols" name="gol06" required /></td>
+                            <td id="equipe06" class="equipe">América-MG</td>
+                        </tr>
+                        <tr id="partida04" class="partida">
+                            <td id="equipe07" class="equipe">Corinthians</td>
+                            <td id="golsEquipe07" class="gols"><input type="number" id="gol07" class="fgols" name="gol07" required /></td>
+                            <td id="vsPartida04" class="vs">x</td>
+                            <td id="golsEquipe08" class="gols"><input type="number" id="gol08" class="fgols" name="gol08" required /></td>
+                            <td id="equipe08" class="equipe">Santos</td>
+                        </tr>
+                        <tr id="partida05" class="partida">
+                            <td id="equipe09" class="equipe">Atlético-MG</td>
+                            <td id="golsEquipe09" class="gols"><input type="number" id="gol09" class="fgols" name="gol09" required /></td>
+                            <td id="vsPartida05" class="vs">x</td>
+                            <td id="golsEquipe10" class="gols"><input type="number" id="gol10" class="fgols" name="gol10" required /></td>
+                            <td id="equipe10" class="equipe">Fortaleza</td>
+                        </tr>
+                        <tr id="partida06" class="partida">
+                            <td id="equipe11" class="equipe">Avaí</td>
+                            <td id="golsEquipe11" class="gols"><input type="number" id="gol11" class="fgols" name="gol11" required /></td>
+                            <td id="vsPartida06" class="vs">x</td>
+                            <td id="golsEquipe12" class="gols"><input type="number" id="gol12" class="fgols" name="gol12" required /></td>
+                            <td id="equipe12" class="equipe">Palmeiras</td>
+                        </tr>
+                        <tr id="partida07" class="partida">
+                            <td id="equipe13" class="equipe">Botafogo</td>
+                            <td id="golsEquipe13" class="gols"><input type="number" id="gol13" class="fgols" name="gol13" required /></td>
+                            <td id="vsPartida07" class="vs">x</td>
+                            <td id="golsEquipe14" class="gols"><input type="number" id="gol14" class="fgols" name="gol14" required /></td>
+                            <td id="equipe14" class="equipe">Fluminense</td>
+                        </tr>
+                        <tr id="partida08" class="partida">
+                            <td id="equipe15" class="equipe">Goiás</td>
+                            <td id="golsEquipe15" class="gols"><input type="number" id="gol15" class="fgols" name="gol15" required /></td>
+                            <td id="vsPartida08" class="vs">x</td>
+                            <td id="golsEquipe16" class="gols"><input type="number" id="gol16" class="fgols" name="gol16" required /></td>
+                            <td id="equipe16" class="equipe">Cuiabá</td>
+                        </tr>
+                        <tr id="partida09" class="partida">
+                            <td id="equipe17" class="equipe">Ceará</td>
+                            <td id="golsEquipe17" class="gols"><input type="number" id="gol17" class="fgols" name="gol17" required /></td>
+                            <td id="vsPartida09" class="vs">x</td>
+                            <td id="golsEquipe18" class="gols"><input type="number" id="gol18" class="fgols" name="gol18" required /></td>
+                            <td id="equipe18" class="equipe">Atlético/GO</td>
+                        </tr>
+                        <tr id="partida10" class="partida">
+                            <td id="equipe19" class="equipe">São Paulo</td>
+                            <td id="golsEquipe19" class="gols"><input type="number" id="gol19" class="fgols" name="gol19" required /></td>
+                            <td id="vsPartida10" class="vs">x</td>
+                            <td id="golsEquipe20" class="gols"><input type="number" id="gol20" class="fgols" name="gol20" required /></td>
+                            <td id="equipe20" class="equipe">Juventude</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><td id="saudacao" colspan="5">Vem Viciado!</td></tr>
+                    </tfoot>
+                </table>
+                <br>
+                <div id="botao">
+                    <input type="submit" name="enviar" value="Enviar" class="botoes" />
+                </div>
+            </form>    
+        </div>
+    </body>
+</html>
+
+
+
