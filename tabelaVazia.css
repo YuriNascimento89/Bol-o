@@ -1,13 +1,11 @@
 
-@charset "UTF-8";
 
-@font-face {
-    font-family: 'TitilliumWeb-Regular';
-    src: url("../fonts/TitilliumWeb-Regular.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 
 table, th, tr, td {
-    font-family: 'TitilliumWeb-Regular', sans-serif;
+    font-family: 'Anton', sans-serif;
     border: 2px solid black;
     border-collapse: collapse;
     text-align: center;
@@ -29,7 +27,7 @@ table, th, tr, td {
 }
 
 .partida {
-    font-family: 'TitilliumWeb-Regular', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-size: 16px;
     text-align: center;
     box-shadow: 0 0 0 0;
